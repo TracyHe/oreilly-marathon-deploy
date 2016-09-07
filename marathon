@@ -3,7 +3,7 @@ require 'net/http'
 require 'uri'
 require 'json'
 
-@url = 'http://10.141.141.10:8080'
+@url = 'http://master.mesos:8080'
 @uri = URI.parse(@url)
 @headers = {'Content-Type' => 'application/json',
             'Accept' => 'application/json'}
@@ -12,7 +12,7 @@ require 'json'
 
 if ARGV.length < 2
   puts "Usage 'marathon [image] [id] [env]'"
-  puts "Example 'marathon rickfast/weather-service weather-service ELASTICSEARCH_HOST=192.168.99.100'"
+  puts "Example 'marathon docker4tracy/weather-service weather-service ELASTICSEARCH_HOST=192.168.99.100'"
   exit 1
 end
 
